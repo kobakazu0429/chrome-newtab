@@ -1,5 +1,7 @@
-import { render } from 'preact'
-import { App } from './app'
-import './index.css'
+import { h, render } from "preact";
+import { App } from "./app";
+import { setup } from "goober";
+import "./index.css";
 
-render(<App />, document.getElementById('app')!)
+setup(h);
+render(<App />, document.getElementById("app")!);

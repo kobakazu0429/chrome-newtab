@@ -1,20 +1,21 @@
-import { Logo } from './logo'
+import bg from "./bg.jpeg";
+import { Clock } from "./components/clock";
 
 export function App() {
   return (
-    <>
-      <Logo />
-      <p>Hello Vite + Preact!</p>
-      <p>
-        <a
-          class="link"
-          href="https://preactjs.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Preact
-        </a>
-      </p>
-    </>
-  )
+    <div
+      style={{ backgroundImage: `url(${bg})`, width: "100%", height: "100%" }}
+    >
+      <div
+        style={{
+          display: "flex",
+          placeContent: "center",
+          flexDirection: "column",
+          height: "100%",
+        }}
+      >
+        <Clock />
+      </div>
+    </div>
+  );
 }
